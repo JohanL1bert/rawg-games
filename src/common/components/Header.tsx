@@ -1,4 +1,6 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+/* import { AppRoute } from 'common/const/AppRoutes.const'; */
 
 export const Header = () => {
   return (
@@ -15,12 +17,12 @@ export const Header = () => {
         </div>
         <div className="header__item">
           <div className="header__log">
-            <a href="#" className="header__log__link">
+            <NavLink to="login" className="header__log__link">
               LOG IN
-            </a>
-            <a href="#" className="header__log__link">
+            </NavLink>
+            <NavLink to="sign-in" className="header__log__link">
               SIGN UP
-            </a>
+            </NavLink>
             <a href="#" className="header__log__link">
               API
             </a>
