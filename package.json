@@ -2,6 +2,8 @@
   "name": "rawg-games",
   "version": "0.1.0",
   "private": true,
+  "author": "Johan",
+  "license": "MIT",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
@@ -10,18 +12,23 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "gh-pages": "^3.2.3",
+    "formik": "^2.2.9",
+    "normalize.css": "^8.0.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "typescript": "^4.4.2",
-    "web-vitals": "^2.1.0"
+    "web-vitals": "^2.1.0",
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint \"**/*.{ts,tsx}\"",
     "lint:fix": "eslint --fix --ext .tsx --ext .ts src/",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "pret": "prettier --write .",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -55,6 +62,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.4.0",
+    "node-sass": "^7.0.1",
     "prettier": "^2.6.2"
   }
 }
