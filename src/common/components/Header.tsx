@@ -1,13 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-/* import { AppRoute } from 'common/const/AppRoutes.const'; */
+import { AppRoute } from 'common/const/AppRoutes.const';
 
 export const Header = () => {
   return (
     <header className="header">
       <div className="header__inner">
         <div className="header__item">
-          <div className="header__logo">1</div>
+          <NavLink to={AppRoute.main}>
+            <div className="header__logo">RAWG</div>
+          </NavLink>
         </div>
         <div className="header__item">
           <div className="header__rate">2</div>
@@ -17,13 +19,13 @@ export const Header = () => {
         </div>
         <div className="header__item">
           <div className="header__log">
-            <NavLink to="login" className="header__log__link">
+            <NavLink to={AppRoute.login} className="header__log__link">
               LOG IN
             </NavLink>
-            <NavLink to="sign-in" className="header__log__link">
+            <NavLink to={AppRoute.signIn} className="header__log__link">
               SIGN UP
             </NavLink>
-            <a href="#" className="header__log__link">
+            <a href="https://rawg.io/apidocs" className="header__log__link">
               API
             </a>
             <div className="header__log__menu">menu</div>
