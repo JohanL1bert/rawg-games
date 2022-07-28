@@ -1,0 +1,65 @@
+.home {
+  &-items {
+    display: grid;
+    grid-template-columns: repeat(4, 382.75px);
+  }
+  &-item {
+    &__wrapper {
+    }
+    &__upper {
+    }
+    &__bottom {
+    }
+  }
+}
+
+.upper {
+  &__wrapper {
+  }
+  &__play-btn {
+  }
+  &__image {
+    display: inline-block;
+    height: 219px;
+    width: 100%;
+  }
+  &__video {
+  }
+  &__play-text {
+  }
+}
+
+.bottom {
+  &__wrapper {
+  }
+  &__icon {
+  }
+  &__text {
+    &__wrapper {
+    }
+    &__tittle {
+    }
+    &-icon {
+    }
+  }
+  &__rating {
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 2px 0;
+    font-weight: 700;
+    width: 32px; //change
+    text-align: center;
+  }
+
+  &__likes {
+  }
+}
+
+.likes {
+  &__wrapper {
+  }
+  &__plus {
+  }
+  &__number {
+  }
+}
