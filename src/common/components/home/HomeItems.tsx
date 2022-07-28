@@ -1,22 +1,29 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable camelcase */
 import React from 'react';
+import { ICardItem } from 'common/interfaces/homeItemInterface';
+import { Rating } from 'common/components/home/Rating';
 
-export const HomeItems = () => {
+export const HomeItems = ({ data }: { data: ICardItem }) => {
   return (
     <div className="home-item">
       <div className="home-item-wrapper">
         <div className="home-item-upper">
           <div className="upper__wrapper">
             <div className="upper__play-btn" />
-            <video src="" className="upper__video" />
+            <img src={data.background_image} alt="game background" className="upper__image" />
+            <video className="upper__video" />
             <div className="upper__play-text">Play full video</div>
           </div>
         </div>
         <div className="home-item-bottom">
           <div className="bottom__wrapper">
             <div className="bottom__icon" />
+            {data.metacritic && <Rating metacritic={data.metacritic} />}
             <div className="bottom__text">
               <div className="bottom__text-wrapper">
                 <p className="bottom__text-tittle">
+                  {data.name}
                   <span className="bottom__text-icon" />
                 </p>
               </div>
