@@ -1,11 +1,11 @@
 import React from 'react';
 import { Field, Form, Formik } from 'formik';
-import { LoginForm } from 'common/components/login/LoginComponent';
-import { ILogin } from 'common/interfaces/SignLogin.interface';
+import { LoginComponent } from 'common/components/login/LoginComponent';
+import { ILogin } from 'common/interfaces/signLoginInterface';
 import { loginValues } from 'common/helpers/schema/login.value';
 import { validationLoginSchema } from 'common/helpers/schema/login.schema';
 
-export const Login = () => {
+export const LoginForm = () => {
   return (
     <Formik
       initialValues={loginValues}
@@ -23,7 +23,7 @@ export const Login = () => {
             placeholder="Email"
             onBlur={handleBlur}
             onChange={handleChange}
-            component={LoginForm}
+            component={LoginComponent}
           />
           <Field
             values={values}
@@ -32,7 +32,7 @@ export const Login = () => {
             errors={errors}
             onBlur={handleBlur}
             onChange={handleChange}
-            component={LoginForm}
+            component={LoginComponent}
           />
           <button type="submit" aria-label="button" className="login__btn" />
         </Form>
